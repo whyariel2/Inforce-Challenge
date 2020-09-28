@@ -10,19 +10,19 @@ Deixamos a estilização do site a cargo do candidato, queremos que nos surpreen
 
 **APIs para o desafio**: 
 
-- Banners: http://dev2019.inforcesite.com.br/banners.json
-- Vitrine de Imóveis: http://dev2019.inforcesite.com.br/vitrines.json
-- Notícias: http://dev2019.inforcesite.com.br/noticias.json
-- Cloud Tags: http://dev2019.inforcesite.com.br/cloudtags.json
+- Banners: https://labs.inforcedata.com.br/desafio-frontend/banners.json
+- Vitrine de Imóveis: https://labs.inforcedata.com.br/desafio-frontend/vitrines.json
+- Notícias: https://labs.inforcedata.com.br/desafio-frontend/noticias.json
+- Cloud Tags: https://labs.inforcedata.com.br/desafio-frontend/cloudtags.json
 
 **Imagens**: 
 	
-- Logo Topo: http://dev2019.inforcesite.com.br/logos/logo_topo.png
-- Logo Footer: http://dev2019.inforcesite.com.br/logos/logo_footer.png
+- Logo Topo: https://labs.inforcedata.com.br/desafio-frontend/logos/logo_topo.png
+- Logo Footer: https://labs.inforcedata.com.br/desafio-frontend/logos/logo_footer.png
 
 **Wireframe**: 
 
--	http://dev2019.inforcesite.com.br/wireframe/wireframe.png
+- https://labs.inforcedata.com.br/desafio-frontend/wireframe/wireframe.png
 
 ## O que será avaliado:
 
