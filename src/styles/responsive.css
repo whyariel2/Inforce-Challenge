@@ -1,0 +1,86 @@
+:root {
+  /*========== Colors ==========*/
+  --first-color: #ffcc15;
+  --first-color-alt: #f2b705;
+  --first-color-light: #ffec3f;
+  --first-color-lighten: #fff7ad;
+  --second-color: #6220b3;
+  --title-color: #411700;
+  --text-color: #575757;
+  --text-color-light: #bfbfbf;
+  --border-color: #F4F5F8;
+  --body-color: #fff;
+  --container-color: #ACB7CD;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 1023px){
+
+  /* === NAV MENU === */
+  .nav-menu{
+    position: fixed;
+    bottom: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, .05);
+    width: 90%;
+    right: 0;
+    left: 0%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    transition: .4s;
+  }
+
+  .nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: var(--text-color);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+  }
+
+  .nav-link i {
+    font-size: 1.25rem;
+  }
+  .nav-link span {
+    display: none;
+  }
+
+  /* === DROPDOWN MENU === */
+  .home-content {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* For 2K & 4K resolutions */

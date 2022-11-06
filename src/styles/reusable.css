@@ -1,0 +1,138 @@
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.section-title span {
+  color: var(--second-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+}
+
+.main {
+  overflow: hidden; /* For the animations ScrollReveal*/
+}
+
+.button {
+  word-wrap: normal;
+}
+
+/* === DROPDOWN === */
+.home-dropdown {
+  min-width: 12.5rem;
+  height: 3rem;
+  position: relative;
+}
+
+.dropdown-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: .5rem;
+  gap: 10px;
+  color: var(--border-color);
+  background: transparent;
+  border-bottom: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dropdown-select span {
+  font-weight: 500;
+}
+
+.dropdown-select i {
+  font-size: 1.25rem;
+}
+
+/* 
+  === ROTATE STYLE ===
+    (Added with JS)
+*/
+.arrow-rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-select:hover {
+  color: var(--first-color);
+  border-bottom: 2px solid var(--first-color);
+  transition: 0.4s;
+}
+
+/* 
+  === CLICKED DROPDOWN STYLE ===
+         (Added with JS)
+*/
+
+.select-clicked {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.75rem var(--container-color);
+}
+
+
+.dropdown-menu {
+  padding: .5rem 1rem;
+  background: var(--border-color);
+  box-shadow: 0 0 0.75rem var(--container-color);
+  border-radius: .5rem;
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+/* 
+  === OPEN STYLE ===
+    (Added with JS)
+*/
+.dropdown-menu-open{
+  display: block;
+  opacity: 1;
+}
+
+
+.dropdown-menu li {
+  padding: 0.5rem 0.25rem;
+  cursor: pointer;
+  color: #575757;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: var(--first-color-lighten);
+  border-bottom: 2px solid var(--first-color);
+  color: var(--title-color);
+}
+
+/* 
+  === ACTIVE STYLE ===
+    (Added with JS)
+*/
+
+.active {
+  background: #23242a;
+}
+
