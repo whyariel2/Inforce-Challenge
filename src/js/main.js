@@ -1,3 +1,9 @@
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+
+
+
+/*=============== DROPDOWN BUTTON ===============*/
+
 // Get all elements from the document
 const optionMenu = document.querySelectorAll(".select-menu");
 

@@ -108,6 +108,9 @@ button {
   height: 3rem;
 }
 
+.nav-button {
+  padding: .5rem 1rem;
+}
 
 
 /* Change background header */
@@ -130,6 +133,7 @@ section.home.parallax {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
 }
 
 section.home.parallax::after {
@@ -138,7 +142,7 @@ section.home.parallax::after {
   width: 100%;
   position: absolute;
   z-index: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%,#000 100% );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%,#000 100% );
 }
 
 section.home.parallax-1{
@@ -150,17 +154,14 @@ section.home.parallax-2{
 }
 
 .home-container {
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  align-items: center;
+  justify-items: center;
   padding: 0;
   gap: 2rem;
 }
 
 .home-content {
   display: flex;
-  flex-direction: row;
+  column-gap: 2.5rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -169,15 +170,14 @@ section.home.parallax-2{
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 2px 4px 8px 2px #F4F5F833;
   border-radius: 0.5rem;
-  z-index: 2;
+  z-index: 1;
 }
-
 
 .home-title {
   font-weight: 600;
   font-size: var(--h1-font-size);
+  color: var(--border-color);
 }
-/*=============== BUTTON ===============*/
 
 /*=============== SHOWCASE ===============*/
 
