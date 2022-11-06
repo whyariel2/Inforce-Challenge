@@ -37,102 +37,72 @@
 }
 
 /* === DROPDOWN === */
-.home-dropdown {
-  min-width: 12.5rem;
-  height: 3rem;
-  position: relative;
+
+.select-menu {
+  width: 12.5rem;
 }
 
-.dropdown-select {
+.select-menu .select-btn{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 3rem;
+  background: transparent;
+  padding: 0.65rem;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
   align-items: center;
-  padding: 10px;
-  margin-bottom: .5rem;
-  gap: 10px;
-  color: var(--border-color);
+  cursor: pointer;
+  justify-content: space-between;
+  color: var(--body-color);
   background: transparent;
   border-bottom: 2px solid var(--border-color);
-  cursor: pointer;
-  transition: background 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-select span {
-  font-weight: 500;
-}
+.section-btn {
+  border-radius: .5rem .5rem 0 0;
+  border-bottom: 2px solid var(--border-color);
+ }
 
-.dropdown-select i {
+.select-btn i {
   font-size: 1.25rem;
 }
 
-/* 
-  === ROTATE STYLE ===
-    (Added with JS)
-*/
-.arrow-rotate {
+.select-menu.active .select-btn i{
   transform: rotate(180deg);
+  transition: 0.3s;
 }
 
-.dropdown-select:hover {
-  color: var(--first-color);
-  border-bottom: 2px solid var(--first-color);
-  transition: 0.4s;
-}
-
-/* 
-  === CLICKED DROPDOWN STYLE ===
-         (Added with JS)
-*/
-
-.select-clicked {
-  border: 1px solid var(--border-color);
-  box-shadow: 0 0 0.75rem var(--container-color);
-}
-
-
-.dropdown-menu {
-  padding: .5rem 1rem;
-  background: var(--border-color);
-  box-shadow: 0 0 0.75rem var(--container-color);
+.select-menu .options {
+  position: fixed;
+  padding: .5rem;
+  margin-top: .5rem;
+  background:rgba(20, 20, 20, 0.25);
   border-radius: .5rem;
-  opacity: 0;
+  color: var(--border-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   display: none;
-  transition: 0.2s;
-  z-index: 1;
 }
 
-/* 
-  === OPEN STYLE ===
-    (Added with JS)
-*/
-.dropdown-menu-open{
+.select-menu.active .options{
   display: block;
-  opacity: 1;
 }
 
-
-.dropdown-menu li {
-  padding: 0.5rem 0.25rem;
+.options .option {
+  display: flex;
+  height: 3rem;
   cursor: pointer;
-  color: #575757;
-  background: transparent;
+  padding: 0 1rem;
+  margin-bottom: .5rem;
+  align-items: center;
+  justify-content: center;
   border-bottom: 2px solid transparent;
   transition: 0.2s;
 }
 
-.dropdown-menu li:hover {
-  background: var(--first-color-lighten);
+.options .option:hover {
   border-bottom: 2px solid var(--first-color);
-  color: var(--title-color);
 }
 
-/* 
-  === ACTIVE STYLE ===
-    (Added with JS)
-*/
-
-.active {
-  background: #23242a;
+.option i {
+  font-size: 2rem;
 }
-
