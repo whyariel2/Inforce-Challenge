@@ -13,3 +13,4 @@ Deixamos a estilização do site a cargo do candidato, queremos que nos surpreen
 ## Dificuldades
 
 - **Desenvolver dropdown da main section**;
+- **Integrar API do Google Maps**;

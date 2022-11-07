@@ -13,7 +13,7 @@
   --second-color: #B38D07;
   --title-color: #411700;
   --text-color: #575757;
-  --text-color-light: #bfbfbf;
+  --text-color-light: #8C8C8C;
   --border-color: #F4F5F8;
   --body-color: #fff;
   --container-color: #ACB7CD;
@@ -386,7 +386,72 @@ section.tranding.parallax::after {
   height: 50vh;
   border: none;
 }
+
+
+/* ================ FOOTER BREAKPOINT ============ */
+.footer-breakpoint {
+  height: 3rem;
+  background: var(--first-color);
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
 /*=============== FOOTER ===============*/
+.footer-container {
+  margin-top: 1rem;
+  row-gap: 2.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.footer-content,
+.footer-links {
+  display: grid;
+}
+
+.footer-content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem 4rem;
+}
+
+.footer-title {
+  color: var(--text-color);
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  row-gap: 0.5rem;
+}
+
+.footer-link {
+  color: var(--text-color-light);
+  transition: .3s;
+}
+
+.footer-link:hover {
+  color: var(--text-color);
+}
+
+.footer-social i {
+  font-size: 1.25rem;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
