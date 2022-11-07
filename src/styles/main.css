@@ -453,6 +453,18 @@ section.tranding.parallax::after {
   gap: .5rem;
 }
 
+.footer-info,
+.footer-privacy {
+  display: flex;
+}
+
+.footer-info {
+  padding-bottom: 6rem;
+  margin-top: 5.5rem;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
 /*=============== SCROLL BAR ===============*/
 
 /*=============== SCROLL UP ===============*/
