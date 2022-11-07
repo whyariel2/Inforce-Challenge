@@ -11,7 +11,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- === SWIPER CSS === -->
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/src/styles/swiper-bundle.min.css">
 
   <!-- === CSS === -->
   <link rel="stylesheet" href="/src/styles/config.css">
@@ -24,7 +24,7 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav-logo">
-        <img class="nav-logo" src="/src/assets/logo-white.svg" alt="Logomarca Informe" srcset="">
+        <img class="nav-logo" id="nav-logo" src="/src/assets/logo-white.svg" alt="Logomarca Informe" srcset="">
       </a>
 
       <div class="nav-menu">
@@ -239,7 +239,161 @@
 
       <!--=== VITRINE ===-->
       <section class="showcase section" id="showcase">
-          
+          <div class="container">
+            <span class="section-subtitle">Melhores escolhas</span>
+            <h2 class="section-title">Vitrine de Imóveis <span>.</span></h2>
+
+            <!-- === CARDS === -->
+            <div class="showcase-container swiper">
+              <div class="swiper-wrapper">
+                
+                <article class="showcase-card swiper-slide">
+                  <img src="/public/imovel1.jpg" alt="" class="showcase-img">
+
+                  <div class="showcase-data">
+                    <h2 class="showcase-title">Apartamento</h2>
+                    <h3 class="showcase-subtitle">Barra da Tijuca - RJ</h3>
+
+                    <div class="showcase-icon">
+                      
+                      <div class="icon-grid">
+                        <i class='bx bx-bed'></i>
+                        <span>2</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-car'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-shape-square'></i>
+                        <span>200m²</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                
+                <article class="showcase-card swiper-slide">
+                  <img src="/public/imovel2.jpg" alt="" class="showcase-img">
+
+                  <div class="showcase-data">
+                    <h2 class="showcase-title">Apartamento</h2>
+                    <h3 class="showcase-subtitle">Barra da Tijuca - RJ</h3>
+
+                    <div class="showcase-icon">
+                      
+                      <div class="icon-grid">
+                        <i class='bx bx-bed'></i>
+                        <span>2</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-car'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-shape-square'></i>
+                        <span>190m²</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                
+                <article class="showcase-card swiper-slide">
+                  <img src="/public/imovel3.jpg" alt="" class="showcase-img">
+
+                  <div class="showcase-data">
+                    <h2 class="showcase-title">Apartamento</h2>
+                    <h3 class="showcase-subtitle">Barra da Tijuca - RJ</h3>
+
+                    <div class="showcase-icon">
+                      
+                      <div class="icon-grid">
+                        <i class='bx bx-bed'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-car'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-shape-square'></i>
+                        <span>190m²</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                
+                <article class="showcase-card swiper-slide">
+                  <img src="/public/imovel4.jpg" alt="" class="showcase-img">
+
+                  <div class="showcase-data">
+                    <h2 class="showcase-title">Apartamento</h2>
+                    <h3 class="showcase-subtitle">Barra da Tijuca - RJ</h3>
+
+                    <div class="showcase-icon">
+                      
+                      <div class="icon-grid">
+                        <i class='bx bx-bed'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-car'></i>
+                        <span>2</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-shape-square'></i>
+                        <span>100m²</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                
+                <article class="showcase-card swiper-slide">
+                  <img src="/public/imovel5.jpg" alt="" class="showcase-img">
+
+                  <div class="showcase-data">
+                    <h2 class="showcase-title">Apartamento</h2>
+                    <h3 class="showcase-subtitle">Barra da Tijuca - RJ</h3>
+
+                    <div class="showcase-icon">
+                      
+                      <div class="icon-grid">
+                        <i class='bx bx-bed'></i>
+                        <span>3</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-car'></i>
+                        <span>1</span>
+                      </div>
+
+                      <div class="icon-grid">
+                        <i class='bx bx-shape-square'></i>
+                        <span>250m²</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ========== SWIPER BUTTONS ========= -->
+              <div class="swiper-button-next">
+                <i class='bx bx-chevron-right' ></i>
+              </div>
+
+              <div class="swiper-button-prev">
+                <i class='bx bx-chevron-left' ></i>
+              </div>
+          </div>
+
+          </div>
       </section>
 
       <!--=== BREAKING NEWS ===-->
@@ -276,7 +430,7 @@
   <script src=""></script>
 
   <!--=== SWIPER JS ===-->
-  <script src=""></script>
+  <script src="/src/js/swiper-bundle.min.js"></script>
 
   <!--=== MAIN JS ===-->
   <script src="/src/js/main.js"></script>

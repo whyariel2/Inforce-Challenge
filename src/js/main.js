@@ -1,5 +1,18 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+const scrollHeader = () =>{
+  const header = document.getElementById('header')
+  var img = document.querySelector('#nav-logo');
+  // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+  this.scrollY >= 100 ? header.classList.add('scroll-header')
+                     : header.classList.remove('scroll-header');
+  
+  this.scrollY>= 100 ? img.setAttribute('src', '/src/assets/logo-black.svg')
+                     : img.setAttribute('src', '/src/assets/logo-white.svg')
+                      
 
+}
+
+window.addEventListener('scroll', scrollHeader);
 
 
 /*=============== DROPDOWN BUTTON ===============*/
@@ -27,4 +40,18 @@ optionMenu.forEach(selectMenu => {
     });
   });
   
+});
+
+// =================== SWIPER ===================
+var swiperShowcase = new Swiper(".showcase-container", {
+  spaceBetween: 32,
+  grabCursor: true,
+  centeredSlides: true,
+  slidePerView: 'auto',
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
