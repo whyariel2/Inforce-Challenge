@@ -122,7 +122,11 @@ button {
 
 
 /* Active link */
-
+.active-link {
+  background: linear-gradient(180deg, #FFCC15 0%, #DFAE00 100%);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(20, 20, 20, 0.25);
+}
 /*=============== HOME ===============*/
 section.home.parallax {
   display: flex;
