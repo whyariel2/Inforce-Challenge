@@ -465,6 +465,18 @@ section.tranding.parallax::after {
   text-align: center;
   row-gap: 1.5rem;
 }
+
+.footer-copy,
+.footer-privacy a {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+.footer-privacy {
+  justify-content: center;
+  column-gap: 1.25rem;
+}
 /*=============== SCROLL BAR ===============*/
 
 /*=============== SCROLL UP ===============*/
