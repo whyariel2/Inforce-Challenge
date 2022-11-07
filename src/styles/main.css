@@ -155,7 +155,7 @@ section.home.parallax-1{
   background-image: url('../../public/banner1.jpg');
 }
 
-section.home.parallax-2{
+section.tranding.parallax-2{
   background-image: url('../../public/banner2.jpg');
 }
 
@@ -317,9 +317,21 @@ section.news .showcase-card:hover {
   box-shadow: 0 2px 8px hsla(228, 66%, 45%, .1);
 }
 
-/*Rotate icon and add shadows*/
-
 /*=============== TRANDING ===============*/
+.popular-btn {
+  display: flex;
+  height: 3rem;
+  background: transparent;
+  padding: 0.65rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  color: var(--border-color);
+  border: 2px solid var(--border-color);
+  border-radius: .5rem;
+}
 
 /*=============== LOCATION ===============*/
 
