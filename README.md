@@ -14,3 +14,5 @@ Deixamos a estilização do site a cargo do candidato, queremos que nos surpreen
 
 - **Desenvolver dropdown da main section**;
 - **Integrar API do Google Maps**;
+- **Completar o site responsivo**;
+
