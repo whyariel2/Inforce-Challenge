@@ -193,36 +193,6 @@ section.showcase .showcase-container {
   padding: 1rem 0 5rem;
 }
 
-/* ============== CARD ================= */
-.showcase-card {
-  width: 290px;
-  background-color: var(--body-color);
-  padding: .5rem .5rem 1.5rem;
-  border-radius: .5rem;
-  margin: 0 auto;
-  transition: .4s;
-}
-
-.showcase-img {
-  border-radius: .5rem;
-  margin-bottom: 1rem;
-}
-
-.showcase-data {
-  padding: 0 1rem 0 .5rem;
-}
-
-.showcase-data .showcase-title {
-  font-size: var(--h2-font-size) ;
-  color: var(--title-color);
-  margin-bottom: .25rem;
-}
-
-.showcase-data .showcase-subtitle {
-  font-size: var(--h3-font-size);
-  font-weight: 300;
-  margin-bottom: .75rem;
-}
 
 .showcase-icon {
   display: flex;
@@ -279,8 +249,48 @@ section.showcase .showcase-container {
 .swiper-button-next {
   right: calc(50% - 3rem);
 }
-/*=============== BREAKING NEWS ===============*/
 
+/*=============== BREAKING NEWS ===============*/
+section.subscribe {
+  background: var(--first-color);
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 4rem 0;
+}
+
+.subscribe-container {
+  flex-direction: row;
+  row-gap: 3rem;
+}
+
+.subscribe-img{
+  height: 130px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-data .subscribe-title{
+  font-size: var(--h1-font-size);
+}
+
+.subscribe-title span {
+  color: #0010B3;
+}
+
+.subscribe-data .subscribe-subtitle{
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+}
+
+/* ======== BUTTON ========== */
+.subscribe-btn {
+  color: #0010B3;
+  text-decoration: underline;
+  font-weight: 300;
+}
 
 /*=============== NEWS ===============*/
 
