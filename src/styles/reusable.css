@@ -130,6 +130,8 @@
 }
 
 .showcase-img {
+  width: 300px;
+  height: 225px;
   border-radius: .5rem;
   margin-bottom: 1rem;
 }
@@ -150,4 +152,5 @@
   font-weight: 300;
   margin-bottom: .75rem;
 }
+
 
