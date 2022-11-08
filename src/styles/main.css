@@ -100,9 +100,12 @@ button {
   align-items: center;
 }
 
+.nav-link {
+  color: var(--second-color);
+}
+
 .nav-link i{
   font-size: 1rem;
-  color: var(--second-color);
 }
 
 .nav-logo {
@@ -123,8 +126,8 @@ button {
 
 /* Active link */
 .active-link {
-  background: linear-gradient(180deg, #FFCC15 0%, #DFAE00 100%);
-  color: #fff;
+  background: linear-gradient(101deg, #FFCC15 0%, #DFAE00 100%);
+  color: var(--title-color) !important;
   box-shadow: 0 4px 8px rgba(20, 20, 20, 0.25);
 }
 /*=============== HOME ===============*/
@@ -280,7 +283,7 @@ section.subscribe {
 }
 
 .subscribe-title span {
-  color: #0010B3;
+  color: var(--second-color);
 }
 
 .subscribe-data .subscribe-subtitle{
@@ -290,7 +293,7 @@ section.subscribe {
 
 /* ======== BUTTON ========== */
 .subscribe-btn {
-  color: #0010B3;
+  color: var(--title-color);
   text-decoration: underline;
   font-weight: 300;
 }
