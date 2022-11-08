@@ -56,26 +56,18 @@ var swiperShowcase = new Swiper(".showcase-container", {
   },
 });
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
-    
-const scrollActive = () =>{
-  	const scrollY = window.pageYOffset
+/*=============== CHANGE SECTIONS ACTIVE LINK ===============*/
+// Find what page we're located
+const activePage = window.location.pathname;
 
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']')
-
-		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
-}
-window.addEventListener('scroll', scrollActive)
+// Loop through all links
+const navLinks = document.querySelectorAll('.nav-menu a').
+forEach(link => {
+  if (link.href.includes(`${activePage}`)) {
+    link.classList.add('active-link');
+  }
+  
+})
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{

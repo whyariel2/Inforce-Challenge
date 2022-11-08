@@ -102,6 +102,7 @@ button {
 
 .nav-link {
   color: var(--second-color);
+  transition: 0.2s;
 }
 
 .nav-link i{
@@ -484,8 +485,19 @@ section.tranding.parallax::after {
   justify-content: center;
   column-gap: 1.25rem;
 }
-/*=============== SCROLL BAR ===============*/
 
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: rgba(189, 191, 199, 1);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(156, 159, 171, 1);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(128, 132, 147, 1);
+}
 /*=============== SCROLL UP ===============*/
 
 /* Show Scroll Up*/
