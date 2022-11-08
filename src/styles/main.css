@@ -326,6 +326,10 @@ section.news .showcase-card:hover {
 }
 
 /*=============== TRANDING ===============*/
+section.tranding {
+  padding: 3.5rem 0;
+}
+
 section.tranding.parallax {
   display: flex;
   flex-direction: column;
@@ -486,6 +490,4 @@ section.tranding.parallax::after {
   justify-content: center;
   column-gap: 1.25rem;
 }
-
-
 /* Show Scroll Up*/
