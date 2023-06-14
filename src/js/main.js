@@ -18,32 +18,15 @@ window.addEventListener('scroll', scrollHeader);
 /*=============== DROPDOWN BUTTON ===============*/
 
 // Get all elements from the document
-const optionMenu = document.querySelectorAll(".select-menu");
+const optionMenu = document.querySelectorAll('.select-menu');
 
 // Loop through all menu elements
 optionMenu.forEach(selectMenu => {
   
-  const selectBtn = document.querySelector(".select-btn"),
-    options = document.querySelectorAll(".option"),
-    btn_text = document.querySelector(".btn-text");
-
-  selectBtn.addEventListener("click", () => {
-    selectMenu.classList.toggle("active");
-  });
-
-  options.forEach(option => {
-    // Get all value inside option text
-    option.addEventListener("click", () => {
-      let selectedOption = option.querySelector(".option-text").innerText;
-      btn_text.innerText = selectedOption;
-      console.log(selectedOption)
-    });
-  });
-  
 });
 
 // =================== SWIPER ===================
-var swiperShowcase = new Swiper(".showcase-container", {
+var swiperShowcase = new Swiper('.showcase-container', {
   spaceBetween: 32,
   grabCursor: true,
   centeredSlides: true,
@@ -51,8 +34,8 @@ var swiperShowcase = new Swiper(".showcase-container", {
   loop: true,
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
