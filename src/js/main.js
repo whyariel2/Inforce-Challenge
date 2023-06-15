@@ -86,43 +86,62 @@ const scrollUp = () =>{
 window.addEventListener('scroll', scrollUp)
 
 
-
-/*===============  DROPDOWN ===============*/ 
-const countriesList = document.querySelectorAll('select-menu')
-
-countriesList.forEach((item) => {
-  const countriesList = item.querySelector('#country')
-
-  countriesList.addEventListener('click', () => {
-    const openItem = document.querySelector('.dropdown-open')
-
-    toggleItem(item)
-
-    // Only one open at a time
-    if (openItem && openItem!== item) {
-      toggleItem(openItem)
-    }
-  })
-});
-
-// Adding class
-const toggleCountry = (item) => {
-  const countriesList = item.querySelector('.country-option')
-
-  if (item.classList.contains('country-selected')) {
-    countriesList.removeAttribute('active')
-    item.classList.remove('dropdown-open')
-  }else {
-    optionMenu.style.height = optionMenu.scrollHeight + 'px'
-  item.classList.add('dropdown-open')
-  }
-};
-
-
 /*=============== API CONNECTION ===============*/ 
 // SHOWCASE
+function showcaseList() {
+  const urlApi = 'https://labs.inforcedata.com.br/desafio-frontend/vitrines.json'
+  
+  fetch(urlApi).then(
+    response => response.json()
+  ).then(data => {
+    const divCard = document.querySelector('#showcase-list')
+  
+    data.forEach((item) => {
+      const numberofCards = 1;
+  
+      const cards = `
+        <article class="showcase-card swiper-slide">
+          <img src="${item.capa}" alt="" class="showcase-img">
 
+          <div class="showcase-data">
+            <h2 class="showcase-title">${item.tipo}</h2>
+            <h3 class="showcase-subtitle">${item.bairro} <br /> ${item.cidade}, ${item.UF}</h3>
 
+            <div class="showcase-icon">
+
+              <div class="icon-grid">
+                <i class='bx bx-bed'></i>
+                <span>${item.quartos}</span>
+              </div>
+
+              <div class="icon-grid">
+                <i class='bx bx-shower'></i>
+                <span>${item.banheiros}</span>
+              </div>
+              
+              <div class="icon-grid">
+                <i class='bx bx-car'></i>
+                <span>${item.vagas}</span>
+              </div>
+
+              <div class="icon-grid">
+                <i class='bx bx-shape-square'></i>
+                <span>${item.metragem}m²</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        `
+      for (let i = 0; i < numberofCards; i++) {
+        divCard.innerHTML += cards;
+      }
+    })
+  
+  }).catch(error => {
+    console.error("Ih rapaz, deu b.o", error)
+  });
+
+}
 
 // NEWS
 function newsList() {
@@ -131,13 +150,13 @@ function newsList() {
   fetch(urlApi).then(
     response => response.json()
   ).then(data => {
-    const divCard = document.querySelector('#card-list')
+    const divCard = document.querySelector('#news-list')
   
     data.forEach((item) => {
       const numberofCards = 1;
   
       const cards = `
-          <article id="news-card" class="showcase-container swiper-slide">
+          <article id="news-card" class="showcase-card swiper-slide">
             <img src="${item.capa}" alt="" class="showcase-img">
   
             <div class="showcase-data">
@@ -159,5 +178,5 @@ function newsList() {
 
 }
 
-
+showcaseList();
 newsList();
