@@ -117,8 +117,9 @@
 }
 
 .showcase-img {
-  width: 300px;
+  width: auto;
   height: 225px;
+  object-fit: fill;
   border-radius: .5rem;
   margin-bottom: 1rem;
 }

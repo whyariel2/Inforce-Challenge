@@ -84,3 +84,80 @@ const scrollUp = () =>{
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+
+
+/*===============  DROPDOWN ===============*/ 
+const countriesList = document.querySelectorAll('select-menu')
+
+countriesList.forEach((item) => {
+  const countriesList = item.querySelector('#country')
+
+  countriesList.addEventListener('click', () => {
+    const openItem = document.querySelector('.dropdown-open')
+
+    toggleItem(item)
+
+    // Only one open at a time
+    if (openItem && openItem!== item) {
+      toggleItem(openItem)
+    }
+  })
+});
+
+// Adding class
+const toggleCountry = (item) => {
+  const countriesList = item.querySelector('.country-option')
+
+  if (item.classList.contains('country-selected')) {
+    countriesList.removeAttribute('active')
+    item.classList.remove('dropdown-open')
+  }else {
+    optionMenu.style.height = optionMenu.scrollHeight + 'px'
+  item.classList.add('dropdown-open')
+  }
+};
+
+
+/*=============== API CONNECTION ===============*/ 
+// SHOWCASE
+
+
+
+// NEWS
+function newsList() {
+  const urlApi = 'https://labs.inforcedata.com.br/desafio-frontend/noticias.json'
+  
+  fetch(urlApi).then(
+    response => response.json()
+  ).then(data => {
+    const divCard = document.querySelector('#card-list')
+  
+    data.forEach((item) => {
+      const numberofCards = 1;
+  
+      const cards = `
+          <article id="news-card" class="showcase-container swiper-slide">
+            <img src="${item.capa}" alt="" class="showcase-img">
+  
+            <div class="showcase-data">
+              <h2 class="showcase-title">${item.titulo}</h2>
+              <p class="news-description">${item.sumario}</p>
+            </div>
+  
+            <a href="${item.link}" class="button news-button">Veja Mais</a>
+          </article>
+        `
+      for (let i = 0; i < numberofCards; i++) {
+        divCard.innerHTML += cards;
+      }
+    })
+  
+  }).catch(error => {
+    console.error("Ih rapaz, deu b.o", error)
+  });
+
+}
+
+
+newsList();
