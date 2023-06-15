@@ -21,9 +21,33 @@ window.addEventListener('scroll', scrollHeader);
 const optionMenu = document.querySelectorAll('.select-menu');
 
 // Loop through all menu elements
-optionMenu.forEach(selectMenu => {
-  
+optionMenu.forEach((item) => {
+  const optionMenu = item.querySelector('.select-btn')
+
+  optionMenu.addEventListener('click', () => {
+    const openItem = document.querySelector('.dropdown-open')
+
+    toggleItem(item)
+
+    // Only one open at a time
+    if (openItem && openItem!== item) {
+      toggleItem(openItem)
+    }
+  })
 });
+
+// Adding class
+const toggleItem = (item) => {
+  const optionMenu = item.querySelector('.dropdown-options')
+
+  if (item.classList.contains('dropdown-open')) {
+    optionMenu.removeAttribute('style')
+    item.classList.remove('dropdown-open')
+  }else {
+    optionMenu.style.height = optionMenu.scrollHeight + 'px'
+  item.classList.add('dropdown-open')
+  }
+};
 
 // =================== SWIPER ===================
 var swiperShowcase = new Swiper('.showcase-container', {
