@@ -178,5 +178,33 @@ function newsList() {
 
 }
 
+// POPULAR    
+function popularList() {
+  const urlApi = 'https://labs.inforcedata.com.br/desafio-frontend/cloudtags.json'
+  
+  fetch(urlApi).then(
+    response => response.json()
+  ).then(data => {
+    const divCard = document.querySelector('#popular-list')
+  
+    data.forEach((item) => {
+      const numberofCards = 1;
+  
+      const cards = `
+        <a href="${item.link}" class="popular-btn">${item.tag}</a>
+      `
+
+      for (let i = 0; i < numberofCards; i++) {
+        divCard.innerHTML += cards;
+      }
+    })
+  
+  }).catch(error => {
+    console.error("Ih rapaz, deu b.o", error)
+  });
+
+}
+
 showcaseList();
 newsList();
+popularList();
