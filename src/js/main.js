@@ -51,30 +51,57 @@ const toggleItem = (item) => {
 
 // =================== SWIPER ===================
 var swiperShowcase = new Swiper('.showcase-container', {
-  spaceBetween: 32,
+  spaceBetween: 80,
   grabCursor: true,
   centeredSlides: true,
-  slidePerView: 'auto',
+  slidePerView: 3,
   loop: true,
 
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 80
+    },
+    720: {
+      slidesPerView: 3,
+      spaceBetween: 80
+    },
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 32
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 32
+    }
+  }
 });
 
 /*=============== CHANGE SECTIONS ACTIVE LINK ===============*/
-// Find what page we're located
-const activePage = window.location.pathname;
+const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollY = window.pageYOffset
 
-// Loop through all links
-const navLinks = document.querySelectorAll('.nav-menu a').
-forEach(link => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add('active-link');
-  }
-  
-});
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav-menu a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link')
+		}else{
+			sectionsClass.classList.remove('active-link')
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{

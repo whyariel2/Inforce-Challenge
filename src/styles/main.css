@@ -44,6 +44,12 @@
   margin: 0;
 }
 
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -240,7 +246,7 @@ section.showcase .showcase-container {
 
 /* Hover Animation */
 section.showcase .showcase-card:hover {
-  box-shadow: 0 12px 16px hsla(228, 66%, 45%, .1);
+  box-shadow: 2.10286px 6px 12px hsla(228, 66%, 45%, .1);
 }
 
 /* Swiper class */
@@ -336,7 +342,7 @@ section.news .showcase-container {
 
 /* Hover Animation */
 section.news .showcase-card:hover {
-  box-shadow: 0 2px 8px hsla(228, 66%, 45%, .1);
+  box-shadow: 2.10286px 6px 12px hsla(228, 66%, 45%, .1);
 }
 
 /*=============== TRANDING ===============*/
@@ -504,4 +510,28 @@ section.tranding.parallax::after {
   justify-content: center;
   column-gap: 1.25rem;
 }
-/* Show Scroll Up*/
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--body-color);
+  box-shadow: 0 8px 12px hsla(228, 66%, 45%, .1);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  z-index: 10;
+  transition: .3s;
+}
+
+.scrollup:hover {
+  transform: translateY(-.25rem);
+  background-color: var(--first-color-alt);
+}
+
+.show-scroll{
+  bottom: 8rem;
+}

@@ -54,6 +54,11 @@
 }
 
 @media screen and (max-width: 320px){
+
+  .home-content{
+    margin: 0;
+  }
+
   .showcase-card {
     width: 230px;
     padding: .5rem .5rem .75rem;
